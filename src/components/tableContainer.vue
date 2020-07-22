@@ -5,16 +5,46 @@
       <table class="table table-striped table-dark">
         <thead>
           <tr>
-            <th scope="col">Regione</th>
-            <th scope="col">Casi totali</th>
-            <th scope="col">Totale positivi</th>
-            <th scope="col">Nuovi positivi</th>
-            <th scope="col">Ospedalizzati</th>
-            <th scope="col">Terapia intensiva</th>
-            <th scope="col">Totale dimessi</th>
-            <th scope="col">Totale deceduti</th>
-            <th scope="col">Totale tamponi</th>
-            <th scope="col">Note</th>
+            <th scope="col">
+              <unicon name="compass" fill="royalblue" />
+              <br />Regione
+            </th>
+            <th scope="col">
+              <unicon name="users-alt" fill="royalblue" />
+              <br />Casi totali
+            </th>
+            <th scope="col">
+              <unicon name="user-plus" fill="royalblue" />
+              <br />Totale positivi
+            </th>
+            <th scope="col">
+              <unicon name="chart-line" fill="royalblue" />
+              <br />Nuovi positivi
+            </th>
+            <th scope="col">
+              <unicon name="hospital" fill="royalblue" />
+              <br />Ospedalizzati
+            </th>
+            <th scope="col">
+              <unicon name="medical-drip" fill="royalblue" />
+              <br />Terapia intensiva
+            </th>
+            <th scope="col">
+              <unicon name="house-user" fill="royalblue" />
+              <br />Totale dimessi
+            </th>
+            <th scope="col">
+              <unicon name="sad-dizzy" fill="royalblue" />
+              <br />Totale deceduti
+            </th>
+            <th scope="col">
+              <unicon name="prescription-bottle" fill="royalblue" />
+              <br />Totale tamponi
+            </th>
+            <th scope="col">
+              <unicon name="envelope-alt" fill="royalblue" />
+              <br />Note
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -102,9 +132,15 @@ export default {
               terInt: response.data[i].terapia_intensiva,
               dimessi: response.data[i].dimessi_guariti,
               deceduti: response.data[i].deceduti,
-              tamponi: response.data[i].tamponi,
-              note: response.data[i].note
+              tamponi: response.data[i].tamponi
             };
+            if (response.data[i].note != null) {
+              regioneTmp.note = response.data[i].note
+                .toLowerCase()
+                .replace(/^\w/, c => c.toUpperCase());
+            } else {
+              regioneTmp.note = "";
+            }
             this.datiRegioni.push(regioneTmp);
           }
         })
@@ -121,3 +157,9 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+thead th{
+    vertical-align: top;
+}
+</style>
