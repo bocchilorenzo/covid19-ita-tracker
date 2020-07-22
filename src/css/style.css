@@ -1,0 +1,56 @@
+:root {
+    --bg-dark: #121212;
+}
+
+body {
+    background-color: var(--bg-dark) !important;
+}
+
+.text {
+    color: ghostwhite;
+}
+
+#app {
+    padding-top: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .mainCol {
+        margin: 1em auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .second {
+        margin-top: 2em;
+    }
+}
+
+#mainData {
+    text-align: center;
+    color     : ghostwhite;
+}
+
+.card {
+    max-height      : 190.5px;
+    background-color: var(--dark) !important;
+}
+
+.card-title,
+.titleListItem {
+    color: royalblue;
+}
+
+.list-group-item {
+    background-color: var(--dark) !important;
+    color           : ghostwhite;
+    border          : 1px solid var(--bg-dark) !important;
+}
+
+.card-body {
+    font-size: 1.5em;
+}
+
+.centrata {
+    margin: 0 auto;
+}
