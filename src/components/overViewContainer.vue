@@ -1,13 +1,10 @@
 <template>
   <main>
-    <h4 class="text">Panoramica del {{datiMain.data}}:</h4>
+    <h4 class="text">Panoramica nazionale del {{datiMain.data}}:</h4>
     <cardOverviewContainer :datiMain="datiMain" />
     <br />
     <h6 class="text">Altri dati:</h6>
     <listOther :datiMain="datiMain" />
-    <br />
-    <h4 class="text">Dati regionali:</h4>
-    <!--INSERIRE REGIONI-->
   </main>
 </template>
 
@@ -16,7 +13,7 @@ import axios from "axios";
 import cardOverviewContainer from "./cardOverviewContainer";
 import listOther from "./otherOverviewList";
 export default {
-  name: "mainContainer",
+  name: "overViewContainer",
   components: {
     cardOverviewContainer,
     listOther

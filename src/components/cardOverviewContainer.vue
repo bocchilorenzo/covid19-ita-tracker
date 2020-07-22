@@ -23,14 +23,14 @@
     </d-col>
     <d-col class="mainCol second" cols="12" md="4">
       <d-card>
-        <d-card-body title="Deceduti">
+        <d-card-body title="Totale deceduti">
           <Roller class="centrata" :transition="2" :text="datiMain.deceduti" />
         </d-card-body>
       </d-card>
     </d-col>
     <d-col class="mainCol second" cols="12" md="4">
       <d-card>
-        <d-card-body title="Tamponi">
+        <d-card-body title="Totale tamponi">
           <Roller class="centrata" :transition="2" :text="datiMain.tamponi" />
         </d-card-body>
       </d-card>

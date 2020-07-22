@@ -6,6 +6,7 @@ import ShardsVue from 'shards-vue'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'shards-ui/dist/css/shards.css'
+import router from './router'
 
 Vue.use(ShardsVue);
 
@@ -15,5 +16,6 @@ Vue.use(Unicon)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')

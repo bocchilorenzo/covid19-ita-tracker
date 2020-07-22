@@ -11,7 +11,7 @@ body {
 }
 
 #app {
-    padding-top: 1em;
+    margin: 2em auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -26,13 +26,18 @@ body {
     }
 }
 
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .card {
+        height: 172px;
+    }
+}
+
 #mainData {
     text-align: center;
     color     : ghostwhite;
 }
 
 .card {
-    max-height      : 190.5px;
     background-color: var(--dark) !important;
 }
 
