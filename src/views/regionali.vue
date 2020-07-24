@@ -7,14 +7,6 @@ import tableContainer from "../components/tableContainer";
 
 export default {
   name: "regionali",
-  title() {
-    return `${this.pageTitle}`;
-  },
-  data(){
-    return{
-      pageTitle: "Ultimi dati regionali"
-    }
-  },
   components: {
     tableContainer
   }
