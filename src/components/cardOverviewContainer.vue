@@ -18,7 +18,7 @@
     </d-col>
     <d-col class="mainCol" cols="12" md="4">
       <d-card>
-        <unicon name="house-user" fill="royalblue" class="iconaCard" width="2.5em" height="2.5em" />
+        <unicon name="home-alt" fill="royalblue" class="iconaCard" width="2.5em" height="2.5em" />
         <d-card-body title="Totale dimessi">
           <Roller class="centrata" :transition="transitionTime" :text="datiMain.dimessi" />
         </d-card-body>

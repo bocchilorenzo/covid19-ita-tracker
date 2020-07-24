@@ -7,34 +7,38 @@
       <p
         class="text"
       >Dati sull'andamento nazionale del virus Covid19 forniti dal Ministero della Salute.</p>
+      <br />
+      <div>
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-sm d-flex justify-content-center">
+              <router-link to="/">
+                <d-button outline>Dati nazionali del giorno</d-button>
+              </router-link>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+              <router-link to="/regionali">
+                <d-button outline theme="info">Dati regionali del giorno</d-button>
+              </router-link>
+            </div>
+            <div class="col-sm d-flex justify-content-center">
+              <router-link to="/storico">
+                <d-button outline theme="success">Storico nazionale</d-button>
+              </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    <router-link v-if="nazionali" to="/">
-      <d-button outline>Visualizza dati nazionali</d-button>
-    </router-link>
-    <router-link v-else to="/regionali">
-      <d-button outline theme="info">Visualizza dati regionali</d-button>
-    </router-link>
     <br />
-    <br />
-    <router-view v-on:btn="cambiaBtn" />
+    <router-view/>
   </d-container>
 </template>
 <script>
 export default {
   name: "App",
   data() {
-    return {
-      nazionali: false
-    };
-  },
-  methods: {
-    cambiaBtn(type) {
-      if (type == "regionale") {
-        this.nazionali = false;
-      } else {
-        this.nazionali = true;
-      }
-    }
+    return {};
   }
 };
 </script>

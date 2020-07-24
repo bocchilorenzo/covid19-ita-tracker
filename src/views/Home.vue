@@ -7,11 +7,16 @@ import overViewContainer from '../components/overViewContainer'
 
 export default {
   name: 'Home',
+  title() {
+    return `${this.pageTitle}`;
+  },
+  data(){
+    return{
+      pageTitle: "Ultimi dati nazionali"
+    }
+  },
   components:{
     overViewContainer
-  },
-  created() {
-    this.$emit("btn", "regionale");
   }
 }
 </script>

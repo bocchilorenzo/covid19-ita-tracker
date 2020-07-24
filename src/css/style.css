@@ -7,7 +7,8 @@ body {
 }
 
 .text {
-    color: ghostwhite;
+    color : ghostwhite;
+    margin: 0;
 }
 
 #app {
@@ -50,4 +51,16 @@ body {
     background-color: var(--dark) !important;
     color           : ghostwhite;
     border          : 1px solid var(--bg-dark) !important;
+}
+
+@media screen and (max-width: 576px) {
+    .col-sm:first-child,
+    .col-sm:first-child+.col-sm {
+        margin-bottom: 0.5rem;
+    }
+}
+
+table p{
+    margin: 0;
+    color: royalblue;
 }
