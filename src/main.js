@@ -8,6 +8,7 @@ import titleMixin from './mixins/titleMixin'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'shards-ui/dist/css/shards.css'
 import router from './router'
+import './registerServiceWorker'
 
 Vue.mixin(titleMixin)
 Vue.use(ShardsVue);
