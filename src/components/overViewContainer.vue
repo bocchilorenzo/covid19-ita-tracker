@@ -10,8 +10,8 @@
 
 <script>
 import axios from "axios";
-import cardOverviewContainer from "./cardOverviewContainer";
-import listOther from "./otherOverviewList";
+import cardOverviewContainer from "./cardOverviewContainer.vue";
+import listOther from "./otherOverviewList.vue";
 export default {
   name: "overViewContainer",
   components: {

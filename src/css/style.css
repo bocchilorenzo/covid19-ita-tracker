@@ -54,13 +54,30 @@ body {
 }
 
 @media screen and (max-width: 576px) {
+
     .col-sm:first-child,
     .col-sm:first-child+.col-sm {
         margin-bottom: 0.5rem;
     }
 }
 
-table p{
+table p {
     margin: 0;
-    color: royalblue;
+    color : royalblue;
+}
+
+@media (min-width: 1500px) {
+
+    .container,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1400px !important;
+    }
+}
+
+g text {
+    color: white !important;
+    fill : white !important;
 }

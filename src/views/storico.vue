@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import tableContainer from "../components/tableContainer";
+import tableContainer from "../components/tableContainer.vue";
 
 export default {
   name: "storico",

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import regionali from '../views/regionali.vue'
 import storico from '../views/storico.vue'
+import grafici from '../views/grafici.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,11 @@ const routes = [
     name: 'storico',
     component: storico
   },
+  {
+    path: '/grafici',
+    name: 'grafici',
+    component: grafici
+  }
 ]
 
 const router = new VueRouter({

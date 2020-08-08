@@ -2,7 +2,7 @@
   <main>
     <h4 v-if="type == 'regioni'" class="text">Panoramica regionale del {{ data }}:</h4>
     <h4 v-else class="text">Storico nazionale</h4>
-    <div class="table-responsive">
+    <div class="table-responsive tableWrap">
       <table class="table table-striped table-bordered table-dark table-sm">
         <thead>
           <tr>
@@ -392,7 +392,7 @@ export default {
       dati: [],
       data: "",
       currentSort: "",
-      currentSortDir: "asc"
+      currentSortDir: "asc",
     };
   },
   created() {
@@ -505,5 +505,34 @@ export default {
 <style scoped>
 thead th {
   vertical-align: top;
+}
+.tableWrap {
+  height: 70vh;
+  overflow: auto;
+}
+@media (max-width: 990px) {
+  .tableWrap {
+    height: 65vh;
+  }
+}
+@media (max-width: 576px) {
+  .tableWrap {
+    height: 55vh;
+  }
+}
+@media (max-width: 484px) {
+  .tableWrap {
+    height: 50vh;
+  }
+}
+thead tr th {
+  position: sticky;
+  top: 0;
+}
+th {
+  background: #212529;
+  /* With border-collapse, we must use box-shadow or psuedo elements
+  for the header borders */
+  box-shadow: 0px 0px 0 1px #32383e;
 }
 </style>

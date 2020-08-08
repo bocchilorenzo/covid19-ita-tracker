@@ -26,20 +26,22 @@
                 <d-button outline theme="success">Storico nazionale</d-button>
               </router-link>
             </div>
+            <div class="col-sm d-flex justify-content-center">
+              <router-link to="/grafici">
+                <d-button outline theme="warning">Grafici</d-button>
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
     </header>
     <br />
-    <router-view/>
+    <router-view />
   </d-container>
 </template>
 <script>
 export default {
-  name: "App",
-  data() {
-    return {};
-  }
+  name: "App"
 };
 </script>
 

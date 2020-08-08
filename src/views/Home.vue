@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import overViewContainer from '../components/overViewContainer'
+import overViewContainer from '../components/overViewContainer.vue'
 
 export default {
   name: 'Home',
