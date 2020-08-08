@@ -29,7 +29,7 @@ body {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .card {
-        height: 172px;
+        height: 200px;
     }
 }
 
@@ -55,9 +55,11 @@ body {
 
 @media screen and (max-width: 576px) {
 
-    .col-sm:first-child,
-    .col-sm:first-child+.col-sm {
+    .col-sm {
         margin-bottom: 0.5rem;
+    }
+    .col-sm:last-child{
+        margin-bottom: 0;
     }
 }
 

@@ -510,21 +510,6 @@ thead th {
   height: 70vh;
   overflow: auto;
 }
-@media (max-width: 990px) {
-  .tableWrap {
-    height: 65vh;
-  }
-}
-@media (max-width: 576px) {
-  .tableWrap {
-    height: 55vh;
-  }
-}
-@media (max-width: 484px) {
-  .tableWrap {
-    height: 50vh;
-  }
-}
 thead tr th {
   position: sticky;
   top: 0;
