@@ -1,6 +1,6 @@
 <template>
   <main>
-    <h4 class="text">Panoramica nazionale del {{datiMain.data}}:</h4>
+    <h4 class="text">Panoramica nazionale del {{ datiMain.data }}:</h4>
     <cardOverviewContainer :datiMain="datiMain" />
     <br />
     <h6 class="text">Altri dati:</h6>
@@ -16,7 +16,7 @@ export default {
   name: "overViewContainer",
   components: {
     cardOverviewContainer,
-    listOther
+    listOther,
   },
   data() {
     return {
@@ -32,8 +32,8 @@ export default {
         testati: "0",
         ricSintomi: "0",
         totOspedalizzati: "0",
-        domicilio: "0"
-      }
+        domicilio: "0",
+      },
     };
   },
   created() {
@@ -43,9 +43,9 @@ export default {
     mainOverview() {
       axios({
         url:
-          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json"
+          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale-latest.json",
       })
-        .then(response => {
+        .then((response) => {
           this.datiMain.data = this.timeConverter(response.data[0].data);
           this.datiMain.totali = response.data[0].totale_casi.toString();
           this.datiMain.nuoviPos = response.data[0].nuovi_positivi.toString();
@@ -59,16 +59,17 @@ export default {
           this.datiMain.totOspedalizzati = response.data[0].totale_ospedalizzati.toString();
           this.datiMain.domicilio = response.data[0].isolamento_domiciliare.toString();
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
     },
     timeConverter(tmp) {
       var a = new Date(tmp);
       var year = a.getFullYear();
-      var month = a.getMonth() < 10 ? "0" + a.getMonth() : a.getMonth();
+      var month =
+        a.getMonth() + 1 < 10 ? "0" + a.getMonth() + 1 : a.getMonth() + 1;
       var date = a.getDate() < 10 ? "0" + a.getDate() : a.getDate();
       var time = date + "-" + month + "-" + year;
       return time;
-    }
-  }
+    },
+  },
 };
 </script>
