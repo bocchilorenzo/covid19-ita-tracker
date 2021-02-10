@@ -65,7 +65,9 @@ export default {
       var a = new Date(tmp);
       var year = a.getFullYear();
       var month =
-        a.getMonth() + 1 < 10 ? "0" + a.getMonth() + 1 : a.getMonth() + 1;
+        parseInt(a.getMonth()) + 1 < 10
+          ? "0" + (parseInt(a.getMonth()) + 1)
+          : parseInt(a.getMonth()) + 1;
       var date = a.getDate() < 10 ? "0" + a.getDate() : a.getDate();
       var time = date + "-" + month + "-" + year;
       return time;

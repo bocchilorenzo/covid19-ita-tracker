@@ -1,6 +1,8 @@
 <template>
   <main>
-    <h4 v-if="type == 'regioni'" class="text">Panoramica regionale del {{ data }}:</h4>
+    <h4 v-if="type == 'regioni'" class="text">
+      Panoramica regionale del {{ data }}:
+    </h4>
     <h4 v-else class="text">Storico nazionale</h4>
     <div class="table-responsive tableWrap">
       <table class="table table-striped table-bordered table-dark table-sm">
@@ -27,7 +29,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" v-else @click="sort('data')">
@@ -51,7 +58,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('casi')">
@@ -75,7 +87,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('totPos')">
@@ -99,7 +116,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('newPos')">
@@ -123,7 +145,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('ospedale')">
@@ -147,7 +174,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('terInt')">
@@ -171,7 +203,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('dimessi')">
@@ -195,7 +232,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('deceduti')">
@@ -219,7 +261,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('tamponi')">
@@ -243,10 +290,19 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
-            <th scope="col" v-if="type == 'storico'" @click="sort('ricSintomi')">
+            <th
+              scope="col"
+              v-if="type == 'storico'"
+              @click="sort('ricSintomi')"
+            >
               <unicon name="head-side-cough" fill="royalblue" />
               <br />
               <p>Ricoverati con sintomi</p>
@@ -267,7 +323,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" v-if="type == 'storico'" @click="sort('domicilio')">
@@ -291,7 +352,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" v-if="type == 'storico'" @click="sort('testati')">
@@ -315,7 +381,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
             <th scope="col" @click="sort('note')">
@@ -339,7 +410,12 @@
                 />
               </p>
               <p v-else>
-                <unicon name="arrows-v" fill="royalblue" width="1.2em" height="1.2em" />
+                <unicon
+                  name="arrows-v"
+                  fill="royalblue"
+                  width="1.2em"
+                  height="1.2em"
+                />
               </p>
             </th>
           </tr>
@@ -385,7 +461,7 @@ import axios from "axios";
 export default {
   name: "tableContainer",
   props: {
-    type: String
+    type: String,
   },
   data() {
     return {
@@ -414,10 +490,10 @@ export default {
     loadRegions() {
       axios({
         url:
-          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json"
+          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-regioni-latest.json",
       })
-        .then(response => {
-          this.data = this.timeConverter(response.data[0].data);
+        .then((response) => {
+          this.data = this.timeTitle(response.data[0].data);
           var regioneTmp = {};
           for (let i = 0; i < response.data.length; i++) {
             regioneTmp = {
@@ -430,26 +506,26 @@ export default {
               terInt: response.data[i].terapia_intensiva,
               dimessi: response.data[i].dimessi_guariti,
               deceduti: response.data[i].deceduti,
-              tamponi: response.data[i].tamponi
+              tamponi: response.data[i].tamponi,
             };
             if (response.data[i].note != null) {
               regioneTmp.note = response.data[i].note
                 .toLowerCase()
-                .replace(/^\w/, c => c.toUpperCase());
+                .replace(/^\w/, (c) => c.toUpperCase());
             } else {
               regioneTmp.note = "";
             }
             this.dati.push(regioneTmp);
           }
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
     },
     loadStorico() {
       axios({
         url:
-          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json"
+          "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json",
       })
-        .then(response => {
+        .then((response) => {
           var storicoTmp = {};
           for (let i = 0; i < response.data.length; i++) {
             storicoTmp = {
@@ -464,19 +540,19 @@ export default {
               ospedale: response.data[i].totale_ospedalizzati,
               ricSintomi: response.data[i].ricoverati_con_sintomi,
               domicilio: response.data[i].isolamento_domiciliare,
-              testati: response.data[i].casi_testati
+              testati: response.data[i].casi_testati,
             };
             if (response.data[i].note != null) {
               storicoTmp.note = response.data[i].note
                 .toLowerCase()
-                .replace(/^\w/, c => c.toUpperCase());
+                .replace(/^\w/, (c) => c.toUpperCase());
             } else {
               storicoTmp.note = "";
             }
             this.dati.push(storicoTmp);
           }
         })
-        .catch(error => console.log(error));
+        .catch((error) => console.log(error));
     },
     timeConverter(tmp) {
       var a = new Date(tmp);
@@ -486,7 +562,18 @@ export default {
       var date = a.getDate() < 10 ? "0" + a.getDate() : a.getDate();
       var time = year + "-" + month + "-" + date;
       return time;
-    }
+    },
+    timeTitle(tmp) {
+      var a = new Date(tmp);
+      var year = a.getFullYear();
+      var month =
+        parseInt(a.getMonth()) + 1 < 10
+          ? "0" + (parseInt(a.getMonth()) + 1)
+          : parseInt(a.getMonth()) + 1;
+      var date = a.getDate() < 10 ? "0" + a.getDate() : a.getDate();
+      var time = date + "-" + month + "-" + year;
+      return time;
+    },
   },
   computed: {
     datiSorted: function() {
@@ -497,8 +584,8 @@ export default {
         if (a[this.currentSort] > b[this.currentSort]) return 1 * modifier;
         return 0;
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
